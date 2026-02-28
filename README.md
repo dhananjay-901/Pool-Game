@@ -18,3 +18,15 @@ i found many more issues in previous versions and fixed them in this one
 self.color0, 0 = color
 SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?}
 5. don't let the white ball roll on wooden parts on the edges of the table which are colored brown
+
+### Summary of fixes
+# Issue                                   Fix Applied
+
+1. Make wooden cue visible                 Created draw_cue_stick() function that draws a proper cue stick
+2. Cue = dark brown, Trajectory = white    Cue stick drawn in DARK_BROWN (RGB: 60,30,10), trajectory line in WHITE
+3. Keep turn if ball potted                Added potted_ball tracking - if a ball is potted, turn stays with current player
+3. Syntax error on line 40                 Changed self.color0, 0 = color to self.color = color
+4. Balls on wooden border                  Changed wall collision boundaries to be inside the brown border (BORDER_SIZE offset)
+
+# Pool_game_v4.py
+the balls were too stiff to move when hit by the while ball, so i made them either glide/slide to make them behave like a normal ball
