@@ -30,3 +30,25 @@ SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?
 
 # Pool_game_v4.py
 the balls were too stiff to move when hit by the while ball, so i made them either glide/slide to make them behave like a normal ball
+
+Change              Before              After                                       Effect
+
+Friction            0.985               0.99                                        Balls glide longer before stopping
+
+Min Velocity        0.05                0.02                                        Balls can move slower before stopping
+
+Wall Bounce         -1.0 (full bounce)  -0.9 (slight energy loss)                   More realistic wall bounces
+
+Collision Physics   Basic momentum      Proper impulse-based elastic collision      Better energy transfer between balls
+
+Collision Checks    1 per frame         4 per frame                                 More accurate collision detection
+
+AI Power            8-14                10-16                                       Stronger shots
+
+#### Key Physics Improvements
+1. Impulse-based collision: Uses proper physics formula with restitution (bounciness) for realistic energy transfer
+2. Lower friction: Balls glide smoothly across the table
+3. Lower velocity threshold: Balls can roll slowly before stopping naturally
+4. Multiple collision checks: Prevents balls from passing through each other
+5. Wall energy loss: Walls absorb some energy like real cushions
+
