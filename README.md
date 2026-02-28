@@ -20,7 +20,7 @@ SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?
 5. don't let the white ball roll on wooden parts on the edges of the table which are colored brown
 
 ### Summary of fixes
-# Issue                                   Fix Applied
+#### Issue                                   Fix Applied
 
 1. Make wooden cue visible                 Created draw_cue_stick() function that draws a proper cue stick
 2. Cue = dark brown, Trajectory = white    Cue stick drawn in DARK_BROWN (RGB: 60,30,10), trajectory line in WHITE
@@ -31,19 +31,19 @@ SyntaxError: cannot assign to literal here. Maybe you meant '==' instead of '='?
 # Pool_game_v4.py
 the balls were too stiff to move when hit by the while ball, so i made them either glide/slide to make them behave like a normal ball
 
-Change              Before              After                                       Effect
+Change              |Before              |After                                       |Effect
 
-Friction            0.985               0.99                                        Balls glide longer before stopping
+Friction            |0.985               |0.99                                        |Balls glide longer before stopping
 
-Min Velocity        0.05                0.02                                        Balls can move slower before stopping
+Min Velocity        |0.05                |0.02                                        |Balls can move slower before stopping
 
-Wall Bounce         -1.0 (full bounce)  -0.9 (slight energy loss)                   More realistic wall bounces
+Wall Bounce         |-1.0 (full bounce)  |-0.9 (slight energy loss)                   |More realistic wall bounces
 
-Collision Physics   Basic momentum      Proper impulse-based elastic collision      Better energy transfer between balls
+Collision Physics   |Basic momentum      |Proper impulse-based elastic collision      |Better energy transfer between balls
 
-Collision Checks    1 per frame         4 per frame                                 More accurate collision detection
+Collision Checks    |1 per frame         |4 per frame                                 |More accurate collision detection
 
-AI Power            8-14                10-16                                       Stronger shots
+AI Power            |8-14                |10-16                                       |sStronger shots
 
 #### Key Physics Improvements
 1. Impulse-based collision: Uses proper physics formula with restitution (bounciness) for realistic energy transfer
